@@ -1,0 +1,15 @@
+
+curl -XPUT http://localhost:9200/file -d '
+{
+ "mappings" : {
+  "_default_" : {
+   "properties" : {
+    "author" : {"type": "string", "index" : "not_analyzed" },
+    "path" : {"type": "string", "index" : "not_analyzed" },
+    "title" : { "type" : "string" },
+    "content" : { "type" : "string" }
+   }
+  }
+ }
+}
+';
